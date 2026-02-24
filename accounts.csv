@@ -1,0 +1,12 @@
+SN,FirstName,LastName,AccountType,RAM,Storage,UserName,Status
+1,James,John,Dedicated,2,80,james123,active
+2,John,Doe,Shared,1,40,john456,active
+3,Jane,Doe,Shared,1,50,jane789,active
+4,Bane,Doe,Shared,1,40,john101,active
+5,Jane,Doe,Shared,1,70,jane111,active
+6,Andrew,Doe,Shared,1,40,john122,active
+7,John,Doe,Dedicated,1,40,john133,active
+8,Matt,Doe,Shared,1,40,john144,active
+9,John,Doe,Shared,1,40,john155,active
+10,Jane,Doe,Shared,1,40,jane166,active
+11,Dave,Doe,Dedicated,1,40,john177,active
