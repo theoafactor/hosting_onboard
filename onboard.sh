@@ -22,7 +22,23 @@ do
             sudo useradd $username
             sudo mkdir /home/$username
             sudo chown $username:$username /home/$username
-            sudo echo "$username:$username" | sudo chpasswd
+            password=$( pwgen -B -1 )
+            sudo echo "$username:$password" | sudo chpasswd
+
+            sendmail theoafactor@gmail.com << EOF
+To: theoafactor@gmail.com
+From: Cyclobold Hosting <theoafactor@gmail.com>
+Subject: Your Hosting Details
+
+Your hosting details are as follows:
+Username: $username
+RAM: $ram GB
+Storage: $storage GB  
+Password: $password      
+EOF
+
+            
+
             sudo echo "User $username created successfully" >> /var/log/onboard.log
 
         elif [[ $accountType == "Dedicated" ]]
