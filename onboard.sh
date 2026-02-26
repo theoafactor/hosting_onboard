@@ -5,7 +5,8 @@ create_user(){
     username=$1
 
     if id "$username" &> /dev/null; then
-        return 1
+        #return 1
+        echo "none"
     else 
         sudo useradd $username
         sudo mkdir /home/$username
@@ -13,7 +14,7 @@ create_user(){
         password=$( pwgen -B -1 )
         sudo echo "$username:$password" | sudo chpasswd
 
-        return $password
+        echo $password
     fi
 }
 
@@ -53,9 +54,9 @@ do
         if [[ $accountType == "Shared" ]]
         then 
             ## create shared account 
-            create_user $username 
-            result=$( echo $? )
-            if [[ $result -eq 1 ]]
+            result=$(create_user $username)
+
+            if [[ $result == "none" ]]
             then
                 echo "Account exists already..."
                 echo "Moving on ..."

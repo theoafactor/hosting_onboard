@@ -10,3 +10,5 @@ SN,FirstName,LastName,AccountType,RAM,Storage,UserName,Status,Email
 9,John,Doe,Shared,1,40,john155,active,jhon@email.com
 10,Jane,Doe,Shared,1,40,jane166,active,jj@email.com
 11,Dave,Doe,Dedicated,1,40,john177,active,dave111@email.com
+12,Terry,Davids,Shared,1,40,john188,active,terry100@email.com
+13,Jola,Ade,Shared,1,40,jola199,active,jola100@email.com
